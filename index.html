@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: rgb(238,238,238);
+            background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(59,119,190,1) 100%); /* radial-gradient sources = https://cssgradient.io/ */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Allow footer to be at the bottom */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .weather-card {
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000000; 
+        }
+
+        .sunny {
+            background: radial-gradient(circle, rgb(255, 217, 1) 0%, rgba(255, 165, 0, 1) 100%);
+        }
+
+        .rainy {
+            background: radial-gradient(circle, rgb(86, 137, 233) 0%, rgb(60, 99, 226) 100%);
+        }  
+
+        .cloudy { 
+            background: radial-gradient(circle, rgba(169, 169, 169, 1) 0%, rgb(250, 244, 244) 100%);
+        }
+
+        .weather-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .weather-card .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .weather-card .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        footer {              
+
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card sunny">
+            <div class="icon">☀️</div>
+            <h2>SUNNY</h2>
+            <div class="temperature">25°C</div>
+            <div class="location">Los Angeles</div>
+            <div class="time">10:30 Jan 02 Mon</div>
+        </div>
+
+        <div class="weather-card rainy">
+            <div class="icon">🌧️</div>
+            <h2>RAINY</h2>
+            <div class="temperature">15°C</div>
+            <div class="location">London</div>
+            <div class="time">12: 30 Jan 02 Mon</div>
+        </div>
+
+        <div class="weather-card cloudy">
+            <div class="icon">☁️</div>
+            <h2>CLOUDY</h2>
+            <div class="temperature">20°C</div>
+            <div class="location">New York</div>
+            <div class="time">11:00 Jan 02 Mon</div>
+        </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Weather App | <a href="https://github.com/miahmih/weather" target="blank"> Jeremiah Louise Masias</a> All rights reserved</p>
+    </footer>
+</body>
+</html>
